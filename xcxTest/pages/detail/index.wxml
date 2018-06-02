@@ -1,0 +1,442 @@
+<!--pages/detail/index.wxml-->
+<!--index.wxml-->
+  <!-- <view class="container">
+  <view wx:for="{{mainInfo.data.house_info.images}}" wx:key="">
+    <image src="{{item.image_path}}"></image>
+  </view>
+</view>   -->
+
+<view class="top-bar">
+  <view class="river">
+     {{info.data.house_info.title}}
+  </view>
+  <view class="store">
+    商铺
+  </view>
+  <view class="sale">
+    在售
+  </view>
+  </view>
+  <view class="another">
+    <view class="name">
+      <!-- 别名：大运河孔雀城温莎郡 -->
+      {{info.data.house_info.seTitle}}
+    </view>
+  </view>
+  <view class="img-border">
+   <image class="img" src="./img/1.png" alt=""></image>
+  </view>
+  <view class="img_two-border">
+  <image class="img-two" src="./img/2.png" alt=""></image>
+  </view>
+  <view class="img_three-border">
+  <image class="img-three" src="./img/3.png" alt=""></image>
+  </view>
+  <view class="box">
+    <view class="inner">
+      <view class="border">
+        <view class="selling-price">
+          售价
+       </view>
+        <view class="price">
+           {{info.data.house_info.price}}万
+        </view>
+      </view>
+    </view>
+    <view class="inner">
+      <view class="border">
+        <view class="house-type">
+          房型
+        </view>
+        <view class="house">
+          {{info.data.house_info.type}}
+        </view>
+      </view>
+      </view>
+    <view class="inner">
+    <view class="building-area">
+       建筑面积 
+      </view>
+      <view class="area">
+         {{info.data.house_info.area}}㎡
+      </view>
+    </view>
+  </view>
+  <view class="time-all">
+    <view class="time">
+      开盘时间 : 
+    </view>
+    <view class="May">
+      <!-- 预计五月开盘 -->
+      {{info.data.house_info.open_time}}
+    </view>
+    <view class="jiantou">
+      <image class="img-four" src="./img/4.png" alt="">
+      </image>             
+    </view>
+  </view>
+  <view class="address-all">
+    <view class="address">
+    地址：
+    </view>
+    <view class="address-area">
+      <!-- 顺义新城第二十一街区 -->
+       {{info.data.house_info.address}}
+    </view>
+    <view class="jiantou-two">
+      <image class="img-four" src="./img/4.png" alt="">
+      </image>
+      </view>             
+    </view>
+    <view class="discount-all">
+      <image class="img-five" src="./img/5.png" alt="">
+      </image> 
+      <view class="discount">
+        全款9.8折，贷款9.9折
+      </view>
+      <view class="get-sale">
+        领优惠
+      </view>
+    </view>
+    <view class="more">
+      更多房源信息
+    </view>
+    <view class="body">
+    </view>
+    <view class="room">
+      <view class="clearfix">
+      <view class="three" wx:for="{{info.data.typs_conditions}}" wx:key="" data-id="{{item.id}}" bindtap='changeRooms' >
+         <!-- 四室  -->
+         {{item.name}}
+      </view>
+      </view>
+      <!-- <view class="three"> -->
+        <!-- 三室 -->
+      <!-- </view>
+      <view class="three"> -->
+        <!-- 两室 -->
+      <!-- </view> -->
+    </view>
+    <view class="list-all">
+      <view class="item"  wx:for="{{roomList.data.house_lists}}" wx:key="">
+       <image  class="item-img" src="{{item.image}}"></image>
+        <view class="one">{{item.title}}</view>
+        <view class="now-sale">在售</view>
+        <view class="hot">热门</view>
+        <view class="area-of-direction">
+          建面191㎡/南北向
+        </view>
+        <view class="condition">
+          <view class="duowei"  wx:for="{{item.tabs}}" wx:key="">
+            {{item}}
+          </view>
+          <!-- <view class="duowei">
+            干湿分离
+          </view>
+          <view class="duowei">
+            户型方正
+          </view> -->
+        </view>
+          <view class="price ">
+            约{{item.price}}/套
+          </view> 
+        </view>
+     <!-- <view class="list">
+        <image class="list-img" src="./img/7.png" alt="">
+        </image>
+        <view class="one">四室一厅两卫</view>
+        <view class="now-sale">在售</view>
+        <view class="hot">热门</view>
+        <view class="area-of-direction">
+          建面191㎡/南北向
+        </view>
+        <view class="condition">
+          <view class="duowei">
+            多卫
+          </view>
+          <view class="fenli">
+            干湿分离
+          </view>
+          <view class="huxing">
+            户型方正
+          </view>
+          </view>
+          <view class="price">
+            约163万/套
+          </view>
+        </view>
+      <view class="list">
+        <image class="list-img" src="./img/7.png" alt="">
+        </image>
+        <view class="one">四室一厅两卫</view>
+        <view class="now-sale">在售</view>
+        <view class="hot">热门</view>
+        <view class="area-of-direction">
+          建面191㎡/南北向
+        </view>
+        <view class="condition">
+          <view class="duowei">
+            多卫
+          </view>
+          <view class="fenli">
+            干湿分离
+          </view>
+          <view class="huxing">
+            户型方正
+          </view>
+          </view>
+          <view class="price">
+            约163万/套
+          </view>
+        </view> -->
+    </view>
+    <view class="body">
+    </view>
+    <view class="comment-all">
+      <view class="user-comment">
+       <view class="user">
+        用户评论
+       </view>
+       <view class="more-comment">
+        更多点评
+       </view>
+       <view class="logo">
+        <image class="img-four2" src="./img/4.png" alt="">
+      </image>
+      </view>
+   </view>
+   <view class="grade">
+    <view class="xingxing">
+       <image class="img-eight" src="./img/8.png" alt="">
+      </image>
+    </view>
+    <view class="zonghe">
+     综合
+    </view>
+    <view class="fenshu">
+      4.0
+    </view>
+    <view class="fen">
+      分
+    </view>
+   </view>
+    <view class="around-all">
+      <view class="around">
+       周围配套3.6分
+      </view>
+      <view class="border-two">
+      </view>
+      <view class="traffic">
+       交通方便3.7分
+      </view>
+       <view class="border-three">
+      </view>
+       <view class="enviroment">
+       环境绿化4.2分
+      </view>
+    </view>
+    <view class="border-four">
+    </view>
+    <view class="evaluate">
+      <view class="first">
+        全部点评(6)
+      </view>
+      <view class="second">
+        实看用户(5)
+      </view>
+      <view class="third">
+        购买用户(5)
+      </view>
+    </view>
+    <view class="evaluate">
+      <view class="fourth">
+        好评(5)
+      </view>
+      <view class="fifth">
+        差评(5)
+      </view>
+      <view class="sixth">
+        有图(5)
+      </view>
+    </view>
+    <view class="eg">
+      <view class="person">
+        <view class="photo">
+         <image class="photo" src="./img/9.png">
+         </image>
+        </view>
+        <view class="name">
+           王小毅 
+          <!-- {{item.user_name}} -->
+        </view>
+        <view class="star">
+           <image class="star" src="./img/8.png">
+           </image>
+        </view>
+        <view class="peitao">
+          配套3
+        </view>
+        <view class="jiaotong">
+          交通3
+        </view>
+         <view class="lvhua">
+          绿化3
+        </view>
+      </view>
+      <view class="jianshu">
+        离市区比较远，周边设施还在建设中，配套环境什么的也算还好，户型特别方正。平常逛个街什么的还是很方便         的，小区园林绿化做的…
+      </view>
+      <view class="quanwen">
+        全文
+      </view>
+      <view class="date">
+        2017年07月26日
+      </view>
+    </view>
+    </view>
+    <view class="body">
+    </view>
+    <view class="ask-all">
+      <view class="ask-people">
+        <view class="people">
+          买房问大家(1389)
+        </view>
+        <view class="look-all">
+          查看全部
+        </view>
+        <view class="jiantoutou">
+          <image class="jiantoutou" src="./img/4.png"></image>
+        </view>
+      </view>
+       <view class="ask" wx:for="{{mainInfo.data.questions}}"  wx:key=""  > 
+        <!-- wx:for="{{mainInfo.data.questions}}"  wx:key="" -->
+        <view class="ask-a">
+          <view class="wen">
+            问
+          </view>
+          <view class="a">
+            
+            {{item.question}}
+          </view>
+        </view>
+        <view class="ask-b">
+          1,982人关注 | 98个回答
+        </view>
+      </view>
+      <!-- <view class="ask">
+        <view class="ask-a">
+          <view class="wen">
+            问
+          </view>
+          <view class="a">
+             
+          </view>
+        </view>
+        <view class="ask-b">
+          1,982人关注 | 98个回答
+        </view>
+      </view> -->
+       <!-- <view class="ask">
+        <view class="ask-a">
+          <view class="wen">
+            问
+          </view>
+          <view class="a">
+          </view>
+        </view>
+        <view class="ask-b">
+          1,982人关注 | 98个回答
+        </view>
+      </view> -->
+    </view>
+    <view class="body">
+    </view>
+    <view class="tuijian">
+      <view class="user-comment">
+       <view class="user">
+        周边推荐
+       </view>
+       <view class="more-comment">
+        更多推荐
+       </view>
+       <view class="logo">
+        <image class="img-four2" src="./img/4.png" alt="">
+      </image>
+      </view>
+      </view>
+      <view class="tuijian-img">
+        <view class="kuang" wx:for="{{mainInfo.data.hotlists}}" wx:key="">
+          <!-- <image class="ig-a" src="./img/10.png"></image> -->
+          <image class="ig-a" src="{{item.image}}"></image>
+        <view class="q">
+          <!-- 西山甲一号山甲山甲… -->
+          {{item.title}}
+         <view class="zhuzhai">
+            住宅
+          </view>
+          </view>
+          <view class="didian">
+            <!-- 朝阳 孙河板块 -->
+            {{item.address}}
+          </view>
+          <view class="jiage">
+            <!-- 均价87152元/平  -->
+            {{item.uprice}}
+          </view>
+        </view>
+        <view class="kuang"> 
+             <!-- <image class="ig-b" src="./img/11.png"></image>
+         <view class="q">
+
+          霞公府
+         
+          <view class="bieshu">
+            别墅
+          </view>
+        </view>
+          <view class="didian">
+            东城 北京饭店
+          </view>
+          <view class="jiage">
+            均价62317元/平  
+          </view>    -->
+           </view>   
+        </view>
+        
+    </view>
+    <view class="xuke">
+      预售许可证： 京房售证字（2017）7号
+    </view>
+    <view class="bottom">
+      <view class="one">
+        询优惠
+      </view>
+      <view class="two">
+        联系售楼处
+      </view>
+    </view>
+
+
+
+    
+    
+    
+    
+    
+   
+    
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+  
+
