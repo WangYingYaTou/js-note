@@ -1,2 +1,3 @@
-# js-note
-笔记
+# swiper
+  运用swiper的框架来实现一个图片轮播
+  
